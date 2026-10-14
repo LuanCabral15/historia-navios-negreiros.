@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#101716"><title>A História dos Navios Negreiros</title>
+<style>
+:root{--bg:#101716;--panel:#1b2421;--cream:#f4eddf;--gold:#d5b477;--muted:#c8cbc5}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--cream);font:16px/1.55 system-ui,Arial,sans-serif}
+header{text-align:center;padding:3rem 1rem;background:linear-gradient(120deg,#101716,#2b3430);border-bottom:1px solid var(--gold)}
+.kicker{color:var(--gold);text-transform:uppercase;letter-spacing:.15em;font-size:.8rem;font-weight:bold}
+h1,h2{font-family:Georgia,serif;line-height:1.15}h1{font-size:clamp(2rem,7vw,4rem);margin:.6rem auto;max-width:900px}
+header p{max-width:700px;margin:auto;color:var(--muted)}main{width:min(920px,calc(100% - 24px));margin:1.5rem auto 3rem}
+.controls{display:flex;justify-content:space-between;align-items:center;gap:.7rem;flex-wrap:wrap;color:var(--muted);margin-bottom:1rem}
+button,.btn{background:transparent;color:var(--cream);border:1px solid var(--gold);border-radius:999px;padding:.7rem 1rem;font:inherit;cursor:pointer;text-decoration:none;display:inline-block}
+button:disabled{opacity:.35;cursor:default}.slide{background:#f7f4ed;color:#222;border-radius:10px;overflow:hidden}.slide[hidden]{display:none}
+.slide img{display:block;width:100%;height:auto}.label{padding:.5rem 1rem;background:#e8deca;font-weight:bold}
+.reflection{margin-top:2rem;background:var(--panel);border:1px solid var(--gold);border-radius:14px;padding:clamp(1rem,4vw,2rem)}
+textarea{display:block;width:100%;min-height:130px;padding:1rem;background:#0e1412;color:white;border:1px solid #778078;border-radius:10px;font:inherit}
+label{display:block;font-weight:bold;margin:.8rem 0 .4rem}.note{font-size:.9rem;color:var(--muted)}
+.videos{display:grid;gap:1rem;margin-top:1rem}.video{border:1px solid #39433e;border-radius:10px;padding:1rem;background:#121a17}.video h3{margin:.1rem 0 .4rem}.video p{color:var(--muted)}
+#videoArea[hidden]{display:none}#status{color:#e8d5a7;margin-top:.8rem}
+@media(min-width:700px){.videos{grid-template-columns:repeat(3,minmax(0,1fr))}}
+footer{text-align:center;color:var(--muted);border-top:1px solid #39433e;padding:1.5rem;font-size:.85rem}
+</style></head><body>
+<header><div class="kicker">Memória • História • Consciência</div><h1>A História dos Navios Negreiros</h1>
+<p>Uma apresentação educativa sobre o tráfico transatlântico de africanos escravizados, suas consequências e a importância de preservar a memória histórica.</p></header>
+<main>
+<div class="controls"><span id="counter" aria-live="polite">Parte 1 de 10</span><div><button id="prev" type="button">← Voltar</button> <button id="next" type="button">Avançar →</button></div></div>
+<div id="slides">
+<figure class="slide"><div class="label">Capa</div><img src="imagens/01-capa.png" alt="Capa: A História dos Navios Negreiros"></figure>
+<figure class="slide" hidden><div class="label">Parte 1 — O que eram os navios negreiros?</div><img src="imagens/02-parte-1.png" alt="Parte 1 da apresentação"></figure>
+<figure class="slide" hidden><div class="label">Parte 2 — Como começou?</div><img src="imagens/03-parte-2.png" alt="Parte 2 da apresentação"></figure>
+<figure class="slide" hidden><div class="label">Parte 3 — Atravessando o Atlântico</div><img src="imagens/04-parte-3.png" alt="Parte 3 da apresentação"></figure>
+<figure class="slide" hidden><div class="label">Parte 4 — As condições a bordo</div><img src="imagens/05-parte-4.png" alt="Parte 4 da apresentação"></figure>
+<figure class="slide" hidden><div class="label">Parte 5 — O destino</div><img src="imagens/06-parte-5.png" alt="Parte 5 da apresentação"></figure>
+<figure class="slide" hidden><div class="label">Parte 6 — O fim do tráfico</div><img src="imagens/07-parte-6.png" alt="Parte 6 da apresentação"></figure>
+<figure class="slide" hidden><div class="label">Parte 7 — Números que chocam</div><img src="imagens/08-parte-7.png" alt="Parte 7 da apresentação"></figure>
+<figure class="slide" hidden><div class="label">Parte 8 — O legado</div><img src="imagens/09-parte-8.png" alt="Parte 8 da apresentação"></figure>
+<figure class="slide" hidden><div class="label">Reflexão final</div><img src="imagens/10-reflexao-final.png" alt="Reflexão final sobre memória e igualdade"></figure>
+</div>
+<section class="reflection"><div class="kicker">Sua vez de refletir</div><h2>O QUE A CONSCIÊNCIA NEGRA FAZ VOCÊ REFLETIR?</h2>
+<p>Escreva sua reflexão com suas próprias palavras. Ao enviar, os três materiais serão liberados.</p>
+<form id="form"><label for="answer">Sua resposta</label><textarea id="answer" required minlength="3" maxlength="1200" placeholder="Escreva sua reflexão aqui..."></textarea>
+<p class="note">Sua resposta é processada somente nesta página; este site não a envia nem a armazena.</p><button type="submit">Enviar reflexão e liberar vídeos</button><div id="status" role="status" aria-live="polite"></div></form>
+<div id="videoArea" hidden><h2>Continue aprendendo</h2><div class="videos">
+<article class="video"><h3>1. Dia da Consciência Negra: a história dos africanos no Brasil</h3><p>Introdução histórica sobre a diáspora africana e a formação do Brasil.</p><a class="btn" href="https://www.youtube.com/watch?v=MI0eVD0gCeM" target="_blank" rel="noopener noreferrer">Assistir no YouTube ↗</a></article>
+<article class="video"><h3>2. Os horrores que aconteciam nos navios negreiros</h3><p>Vídeo explicativo; não é uma gravação autêntica da época.</p><a class="btn" href="https://www.youtube.com/watch?v=hXpG8XV4vCs" target="_blank" rel="noopener noreferrer">Assistir no YouTube ↗</a></article>
+<article class="video"><h3>3. Memória e relato histórico</h3><p>Relato de memória disponível no acervo do Museu da Pessoa. Este link não é do YouTube.</p><a class="btn" href="https://museudapessoa.org/historia-de-vida/homem-bicho-danado/" target="_blank" rel="noopener noreferrer">Ver relato ↗</a></article>
+</div><p class="note">Confira a disponibilidade e a adequação dos vídeos antes da apresentação.</p></div>
+</section></main><footer>Material educativo • Memória, respeito, igualdade e valorização da história negra</footer>
+<script>
+(()=>{const slides=[...document.querySelectorAll('.slide')],counter=document.getElementById('counter'),prev=document.getElementById('prev'),next=document.getElementById('next');let n=0;
+function show(i){n=Math.max(0,Math.min(slides.length-1,i));slides.forEach((s,j)=>s.hidden=j!==n);counter.textContent=`Parte ${n+1} de ${slides.length}`;prev.disabled=n===0;next.disabled=n===slides.length-1}
+prev.onclick=()=>show(n-1);next.onclick=()=>show(n+1);show(0);
+document.getElementById('form').addEventListener('submit',e=>{e.preventDefault();if(document.getElementById('answer').value.trim().length<3)return;document.getElementById('videoArea').hidden=false;document.getElementById('status').textContent='Obrigado por compartilhar sua reflexão. Os vídeos estão liberados!';document.getElementById('videoArea').scrollIntoView({behavior:'smooth'});});
+})();
+</script></body></html>
